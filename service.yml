@@ -10,5 +10,5 @@ spec:
     - protocol: TCP
       port: 80        # The port that the service will expose inside the cluster
       targetPort: 8080  # The port the container is exposing (in the pod)
-  type: Nodeport
+  type: ClusterIP
     
