@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: Todo_app  # Name of the service
+  name: my-first-service  # Name of the service
   namespace: dev  # Optional: Specify the namespace where the service will reside
 spec:
   selector:
@@ -10,5 +10,5 @@ spec:
     - protocol: TCP
       port: 80        # The port that the service will expose inside the cluster
       targetPort: 8080  # The port the container is exposing (in the pod)
-      type: clusterIPservice
+  type: Nodeport
   clusterIP: None  # Optional: If you want to set a specific IP or leave it as None for headless service
