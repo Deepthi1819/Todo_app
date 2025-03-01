@@ -11,4 +11,4 @@ spec:
       port: 80        # The port that the service will expose inside the cluster
       targetPort: 8080  # The port the container is exposing (in the pod)
   type: Nodeport
-  clusterIP: None  # Optional: If you want to set a specific IP or leave it as None for headless service
+    
