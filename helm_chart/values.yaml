@@ -1,0 +1,26 @@
+# values.yaml
+
+replicaCount: 1
+
+image:
+  repository: deepthi1819/pythonimagee:latest
+  pullPolicy: IfNotPresent
+  tag: "latest"
+
+service:
+  type: ClusterIP
+  port: 80
+
+env:
+  POSTGRES_USER: "POSTGRES_USER"
+  POSTGRES_PASSWORD: "POSTGRES_PASSWORD"
+  POSTGRES_DB: "POSTGRES_DB"
+  POSTGRES_HOST: "POSTGRES_HOST"
+
+ingress:
+  enabled: false
+  annotations: {}
+  hosts:
+    - host: flask-todo-app.local
+      paths: ["/"]
+  tls: []

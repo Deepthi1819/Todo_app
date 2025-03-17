@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ "TODO_APP" }}
+  labels:
+    app: {{ "TODO_APP" }}
+spec:
+  selector:
+    app: {{ "TODO_APP" }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: 80
+      protocol: TCP
+  type: {{ .Values.service.type }}
